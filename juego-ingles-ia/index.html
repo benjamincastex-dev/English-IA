@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English AI Challenge</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/machinelearn/machinelearn.min.js"></script>
+</head>
+<body>
+    <div class="fondo-grid"></div>
+    <header>
+        <div class="logo">
+            <span class="icono">◈</span>
+            ENGLISH<span>AI</span>
+        </div>
+        <div class="estado-ia">
+            <span class="punto-verde"></span>
+            IA ACTIVA
+        </div>
+    </header>
+    <main id="menu" class="pantalla">
+        <div class="titulo-principal">
+            <p class="subtitulo">
+                SISTEMA DE ENTRENAMIENTO
+            </p>
+            <h1>
+                ENGLISH<br>
+                <span>AI CHALLENGE</span>
+            </h1>
+            <p class="descripcion">
+                Poné a prueba tus conocimientos de inglés
+                y dejá que la IA analice tu desempeño.
+            </p>
+        </div>
+        <div class="panel-menu">
+            <h2>
+                SELECCIONÁ LA DIFICULTAD
+            </h2>
+            <div class="dificultades">
+                <button
+                    id="facilBtn"
+                    class="boton-dificultad facil">
+                    <strong>FÁCIL</strong>
+                    <small>
+                        +10 PUNTOS
+                    </small>
+                </button>
+                <button
+                    id="medioBtn"
+                    class="boton-dificultad medio">
+                    <strong>MEDIO</strong>
+                    <small>
+                        +15 PUNTOS
+                    </small>
+                </button>
+                <button
+                    id="dificilBtn"
+                    class="boton-dificultad dificil">
+                    <strong>DIFÍCIL</strong>
+                    <small>
+                        +20 PUNTOS
+                    </small>
+                </button>
+            </div>
+            <button
+                id="continuarBtn"
+                class="boton-continuar">
+                ▶ CONTINUAR PARTIDA
+            </button>
+            <button
+                id="nuevaBtn"
+                class="boton-nueva">
+                ⚡ NUEVA PARTIDA
+            </button>
+        </div>
+    </main>
+    <main
+        id="juego"
+        class="pantalla oculto">
+        <div class="hud">
+            <div class="hud-item">
+                <span>NIVEL</span>
+                <strong id="nivel">
+                    01
+                </strong>
+                <small>
+                    / 40
+                </small>
+            </div>
+            <div class="hud-item">
+                <span>PUNTOS</span>
+                <strong id="puntos">
+                    0
+                </strong>
+            </div>
+            <div class="hud-item">
+                <span>RACHA</span>
+                <strong id="combo">
+                    0 🔥
+                </strong>
+            </div>
+            <div class="hud-item vidas">
+                <span>VIDAS</span>
+                <strong id="vidas">
+                    ❤️❤️❤️
+                </strong>
+            </div>
+        </div>
+        <div class="barra-contenedor">
+            <div id="barra-progreso"></div>
+        </div>
+        <section class="zona-juego">
+            <div
+                class="categoria"
+                id="categoria">
+                VOCABULARIO
+            </div>
+            <div class="pregunta-box">
+                <p id="instruccion">
+                    Elegí la traducción correcta
+                </p>
+                <h2 id="pregunta">
+                    HOUSE
+                </h2>
+                <button
+                    id="escucharBtn"
+                    class="boton-escuchar oculto">
+                    🔊 ESCUCHAR
+                </button>
+            </div>
+            <div
+                id="respuestas"
+                class="respuestas">
+            </div>
+            <div class="acciones">
+                <button
+                    id="pistaBtn"
+                    class="boton-pista">
+                    💡 PISTA
+                </button>
+                <button
+                    id="salirBtn"
+                    class="boton-salir">
+                    ↩ MENÚ
+                </button>
+            </div>
+            <div
+                id="mensaje"
+                class="mensaje">
+            </div>
+        </section>
+    </main>
+    <main
+        id="final"
+        class="pantalla oculto">
+        <div class="resultado">
+            <div class="resultado-icono">
+                🏆
+            </div>
+            <p class="subtitulo">
+                ENTRENAMIENTO FINALIZADO
+            </p>
+            <h1>
+                RESULTADOS
+            </h1>
+            <div class="estadisticas">
+                <div>
+                    <span>
+                        PUNTOS
+                    </span>
+                    <strong id="resultadoPuntos">
+                        0
+                    </strong>
+                </div>
+                <div>
+                    <span>
+                        ACIERTOS
+                    </span>
+                    <strong id="resultadoAciertos">
+                        0
+                    </strong>
+                </div>
+                <div>
+                    <span>
+                        ERRORES
+                    </span>
+                    <strong id="resultadoErrores">
+                        0
+                    </strong>
+                </div>
+            </div>
+            <div class="analisis-ia">
+                <span>
+                    ▣ ANÁLISIS DE MACHINELEARN
+                </span>
+                <h2 id="perfilJugador">
+                    ANALIZANDO...
+                </h2>
+                <p id="recomendacion">
+                    La IA está analizando tu desempeño.
+                </p>
+            </div>
+            <button
+                id="inicioBtn"
+                class="boton-nueva">
+                ⚡ NUEVA PARTIDA
+            </button>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
